@@ -3,7 +3,7 @@ their forks, e.g. after pull request have been done by others
 
 ############################ Installation #################################
 
-1. Set the variables inside the script, e.g. $dir and $remotename (line 1,2)
+1. Set the variables inside the script, e.g. 'dir' and 'remotename' (line 1,2)
    Remote names have to be similar to work
 
 2. Move the script to /usr/bin to enable autocompletion with git
