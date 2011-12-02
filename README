@@ -8,6 +8,8 @@ their forks, e.g. after pull request have been done by others
 
 2. Move the script to /usr/bin to enable autocompletion with git
 
+3. Chmod +x to allow execution
+
 ############################## Copyright ##################################
 
 Copyright (C) 2011 Martijn Swaagman <http://www.swaagman.info/>
