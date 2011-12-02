@@ -1,9 +1,14 @@
+This script will enable users to mass pull from the main repositories of
+their forks, e.g. after pull request have been done by others
+
+############################ Installation #################################
+
 1. Set the variables inside the script, e.g. $dir and $remotename (line 1,2)
    Remote names have to be similar to work
 
 2. Move the script to /usr/bin to enable autocompletion with git
 
-############################################################################
+############################## Copyright ##################################
 
 Copyright (C) 2011 Martijn Swaagman <http://www.swaagman.info/>
 
