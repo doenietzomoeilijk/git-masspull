@@ -1,0 +1,40 @@
+#!/bin/bash
+<<<<<<< HEAD
+[[ -n `git config --global repo.dir` ]] \
+  && dir=`git config --global repo.dir` || dir=~/
+[[ -n `git config --local repo.main` ]] \
+  && rem=`git config --local repo.main` || rem='upstream'
+[[ -n `git config --local repo.branch` ]] \
+  && brm=`git config --local repo.branch` || brm='master'
+=======
+dir=~/projects
+remotename='downstream'
+>>>>>>> 322d412ccc05b4f327b8e54707193a59485492c9
+
+IFS=$'\n'
+for name in $(find $dir -type d -name .git | xargs -n 1 dirname | sort)
+do
+  cd $name
+<<<<<<< HEAD
+  cur=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`
+  if [[ $cur != $brm ]]
+  then
+    git checkout $brm
+  fi
+  git pull $rem $brm
+  if [[ $cur != $brm ]]
+  then
+    git checkout $cur
+=======
+  curbranch=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`
+  if [ $curbranch != 'master' ]
+  then
+    git checkout master
+  fi
+  git pull $remotename master
+  if [ $curbranch != 'master' ]
+  then
+    git checkout $curbranch
+>>>>>>> 322d412ccc05b4f327b8e54707193a59485492c9
+  fi
+done

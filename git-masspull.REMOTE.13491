@@ -1,0 +1,19 @@
+#!/bin/bash
+dir=~/projects
+remotename='downstream'
+
+IFS=$'\n'
+for name in $(find $dir -type d -name .git | xargs -n 1 dirname | sort)
+do
+  cd $name
+  curbranch=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`
+  if [ $curbranch != 'master' ]
+  then
+    git checkout master
+  fi
+  git pull $remotename master
+  if [ $curbranch != 'master' ]
+  then
+    git checkout $curbranch
+  fi
+done
