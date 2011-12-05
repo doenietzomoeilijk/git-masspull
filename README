@@ -3,8 +3,9 @@ their forks, e.g. after pull request have been done by others
 
 ############################ Installation #################################
 
-1. Set the variables inside the script, e.g. 'dir' and 'remotename' (line 1,2)
-   Remote names have to be similar to work
+1. Add config option: git config --global repo.dir '<root dir of repositories>'
+   Add config option (to each repo): git config --local repo.remote '<main remote>'
+   Add config option (to each repo): git config --local repo.branch '<main branch>'
 
 2. Move the script to /usr/bin to enable autocompletion with git
 

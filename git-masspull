@@ -1,8 +1,8 @@
 #!/bin/bash
 [[ -n `git config --global repo.dir` ]] \
   && dir=`git config --global repo.dir` || dir=~/
-[[ -n `git config --local repo.main` ]] \
-  && rem=`git config --local repo.main` || rem='upstream'
+[[ -n `git config --local repo.remote` ]] \
+  && rem=`git config --local repo.remote` || rem='upstream'
 [[ -n `git config --local repo.branch` ]] \
   && brm=`git config --local repo.branch` || brm='master'
 
