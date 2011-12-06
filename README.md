@@ -2,17 +2,16 @@ This script will enable users to mass pull from the main repositories of
 their forks, e.g. after pull request have been done by others
 
 # Installation 
-***
-1. Add config option: git config --global repo.dir '<root dir of repositories>'
-   Add config option (to each repo): git config repo.remote '<main remote>'
-   Add config option (to each repo): git config repo.branch '<main branch>'
 
-2. Move the script to /usr/bin to enable autocompletion with git
+1.  Add config option: git config --global repo.dir '<root dir of repositories>'
+    Add config option (to each repo): git config repo.remote '<main remote>'
+    Add config option (to each repo): git config repo.branch '<main branch>'
 
-3. Chmod +x to allow execution
+2.  Move the script to /usr/bin to enable autocompletion with git
+
+3.  Chmod +x to allow execution
 
 # Copyright
-***
 
 Copyright (C) 2011 Martijn Swaagman <http://www.swaagman.info/>
 
