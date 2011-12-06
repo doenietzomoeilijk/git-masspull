@@ -3,13 +3,17 @@ e.g. after pull request have been done by others
 
 # Installation 
 
-1.  Add config option: git config --global repo.dir '<root dir of repositories>'<br/>
-    Add config option (to each repo): git config repo.remote '<main remote>'<br/>
-    Add config option (to each repo): git config repo.branch '<main branch>'
+1.  Add config option: git config --global repo.dir 'root dir of repositories'<br/>
+    Add config option (to each repo): git config repo.remote 'main remote'<br/>
+    Add config option (to each repo): git config repo.branch 'main branch'
 
 2.  Move the script to /usr/bin to enable autocompletion with git
 
 3.  Chmod +x to allow execution
+
+# Todo
+
+* Instead of hardcore pulls, allow fetch and then merging different pseudo-branches
 
 # Copyright
 
