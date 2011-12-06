@@ -7,10 +7,10 @@ for name in $(find $dir -type d -name .git | xargs -n 1 dirname | sort)
 do
   cd $name
 
-	[[ -n `git config repo.remote` ]] \
-		&& rem=`git config repo.remote` || rem='upstream'
-	[[ -n `git config repo.branch` ]] \
-		&& brm=`git config repo.branch` || brm='master'
+  [[ -n `git config repo.remote` ]] \
+    && rem=`git config repo.remote` || rem='upstream'
+  [[ -n `git config repo.branch` ]] \
+    && brm=`git config repo.branch` || brm='master'
 
   cur=`git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3`
   if [[ $cur != $brm ]]
