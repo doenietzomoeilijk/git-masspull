@@ -5,6 +5,8 @@
 IFS=$'\n'
 for name in $(find $dir -type d -name .git | xargs -n 1 dirname | sort)
 do
+	echo $name
+	echo ============================================================================
   cd $name
 
   [[ -n `git config repo.remote` ]] \
@@ -22,4 +24,5 @@ do
   then
     git checkout $cur
   fi
+	echo
 done
